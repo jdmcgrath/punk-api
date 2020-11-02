@@ -1,0 +1,59 @@
+.sideNav {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    background-color: #232526;
+    color: #f0f0f0;
+    padding: 24px;
+
+
+    @media all and (max-width: 768px) {
+        padding: 0 16px;
+    }
+
+    .navContent {
+        @media all and (max-width: 768px) {
+            display: none;
+        }
+
+        &.show {
+            display: block;
+        }
+    }
+
+    .logo {
+        display: flex;
+        justify-content: center;
+
+        h1 {
+            font-size: 34px;
+            letter-spacing: .2px;
+        }
+
+        img {
+            height: 120px;
+            opacity: .95;
+
+            @media all and (max-width: 768px) {
+                height: 90px;
+            }
+        }
+    }
+    @media all and (max-width: 768px) {
+        z-index: 999;
+        width: auto;
+    }
+
+    .mobileMenu {
+        display: none;
+
+        @media all and (max-width: 768px) {
+            display: inline-block;
+            padding: 12px 0;
+            text-align: right;
+            cursor: pointer;
+        }
+    }
+}

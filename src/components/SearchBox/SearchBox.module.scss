@@ -1,0 +1,22 @@
+.searchBox {
+    margin: 30px 0 30px 0;
+
+    input {
+        padding: 8px 0;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        width: 100%;
+        background: transparent;
+        color: white;
+        font-size: 18px;
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .2px;
+
+        &::placeholder {
+            color: #aaa;
+            letter-spacing: .2px;
+        }
+    }
+}
