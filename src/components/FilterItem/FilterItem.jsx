@@ -2,15 +2,15 @@ import React, { useState } from "react";
 import styles from "./FilterItem.module.scss";
 
 const FilterItem = (props) => {
-  const { filters, handleChecked } = props;
+  const { filter, handleChecked } = props;
 
   const [isChecked, setIsChecked] = useState(false);
 
   const toggleCheckbox = () => {
-    handleChecked(filters, !isChecked);
+    handleChecked(filter, !isChecked);
     setIsChecked(!isChecked);
   };
-  const { label, value } = filters;
+  const { label, value } = filter;
 
   return (
     <div className={styles.filterItem}>

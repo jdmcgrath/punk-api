@@ -1,0 +1,27 @@
+.cardList {
+    display: grid;
+    gap: 22px;
+    grid-template-columns: repeat(3, 1fr);
+    left: 280px;
+    position: absolute;
+    margin: 20px 2vw;
+
+    .displayMsg {
+        font-family: 'Oswald', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: .2px;
+        font-size: 18px;
+    }
+
+    @media all and (max-width: 992px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media all and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 20px 4vw;
+        left: 48px;
+    }
+}

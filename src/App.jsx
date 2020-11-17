@@ -6,7 +6,7 @@ import Main from "./components/Main";
 
 const App = () => {
   // beers list is empty, but set their state ready for API response
-  const [beers, setBeers] = useState();
+  const [beers, setBeers] = useState([]);
 
   // SearchTerm will be used to filter list of beers by term
   const [searchTerm, setSearchTerm] = useState("");
@@ -23,12 +23,10 @@ const App = () => {
 
   // Upon filter changing being applied/not, set the filters being applied
   const handleChecked = (filter, isChecked) => {
-    const filters = [...filters];
-    const index = filters.findIndex(
-      (condition) => condition.value === filter.value
-    );
-    filters[index].isChecked = isChecked;
-    setFilters(filters);
+    const filtersCopy = Object.assign([], filters);
+    const index = filters.findIndex((f) => f.value === filter.value);
+    filtersCopy[index].isChecked = isChecked;
+    setFilters(filtersCopy);
   };
 
   // Fetch the beers from PUNK API
@@ -45,10 +43,11 @@ const App = () => {
   // On page load, fetch the beers
   useEffect(() => {
     fetchBeers();
-  });
+  }, []);
 
   return (
     <>
+      {/* <button onClick = {(() => setFilters([]))}>Hello</button> */}
       <NavBar
         filters={filters}
         handleChange={handleChange}

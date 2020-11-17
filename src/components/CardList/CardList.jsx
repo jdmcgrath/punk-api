@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./CardList.module.scss";
 import Card from "../Card";
 
-const getBeers = (props) => {
+const CardList = (props) => {
   const { beers, searchTerm, filters } = props;
   const checked = filters
     .filter((condition) => condition.isChecked)
@@ -24,15 +24,12 @@ const getBeers = (props) => {
     // Map all beers that pass these criteria
     .map((beer) => <Card key={beer.id} beer={beer} />);
 
-  return results.length > 0 ? results : displayMsg();
+  // return results.length > 0 ? results : displayMsg();
+  return <section className={styles.cardList}>{results}</section>;
 };
 
 const displayMsg = () => {
   return <span className={styles.displayMsg}>No results to display...</span>;
-};
-
-const CardList = () => {
-  return <section className={styles.cardList}>{getBeers()}</section>;
 };
 
 export default CardList;
