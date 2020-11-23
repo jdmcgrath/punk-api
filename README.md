@@ -24,7 +24,7 @@ And of course my Punk API itself is open source, so feel free to pick and choose
  - Add favourite brews to your account favourites
 
 
-If you wish to run the project for yourself after downloading the code
+If you wish to run the project for yourself after downloading the code <br />
 In the project directory, you can run:
 
 #### `yarn start`
