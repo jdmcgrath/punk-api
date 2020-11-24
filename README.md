@@ -1,5 +1,7 @@
-# Punk API
 <img src="https://d1fnkk8n0t8a0e.cloudfront.net/images/BREWDOG-LOGO.png" height="150"/>
+
+# Punk API
+
 The Punk API uses the BrewDog API to display a collection of their *finest* drinks. <br />
 A user can search for a particular brew they like via the searchbox, or filter the results to their liking. <br />
 In this project, props were needed to be passed down component trees (prop drilling), and data transmitted around using functions as props (e.g. the search term from the input in the navbar must have the data passed to the cards to display the correct brews. <br /><br />
